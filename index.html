@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yaya Ehsan — Portfolio</title>
+  <meta name="description" content="Yaya Ehsan: designer, photographer and content creator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MENU BAR -->
+  <header class="menubar">
+    <div class="left">
+      <span class="mark" aria-hidden="true">✦</span>
+      <button class="mb-link strong" data-open="about">Yaya Ehsan’s Portfolio</button>
+      <button class="mb-link" data-open="contact">Contact</button>
+      <button class="mb-link" data-open="resume">Resume</button>
+    </div>
+    <div class="right">
+      <span class="status" aria-hidden="true">◐ ᯤ ▮▮▮▯</span>
+      <span id="clock"></span>
+    </div>
+  </header>
+
+  <!-- DESKTOP -->
+  <main class="desktop" id="desktop">
+
+    <div class="sticky" id="sticky">
+      <strong>To do:</strong>
+      <ul>
+        <li>Design something people love</li>
+        <li class="done">Learn Figma shortcuts</li>
+        <li>Shoot golden hour every week</li>
+        <li>Finish my next painting</li>
+        <li class="done">Drink water</li>
+        <li>Build my dream portfolio ✿</li>
+      </ul>
+    </div>
+
+    <div class="welcome">
+      <p>welcome to my</p>
+      <h1>portfolio.</h1>
+    </div>
+
+    <!-- Icons are created from the data in the <script> below -->
+    <div id="icons"></div>
+
+    <!-- Windows open in here -->
+    <div id="windows"></div>
+  </main>
+
+  <!-- DOCK -->
+  <nav class="dock" aria-label="Dock">
+    <button class="dock-app" data-open="about"    title="About me"><span style="--c:#f4a7c0">☺</span></button>
+    <button class="dock-app" data-open="projects" title="Projects"><span style="--c:#8fc4f2">▤</span></button>
+    <button class="dock-app" data-open="photos"   title="Photography"><span style="--c:#ffd36e">✿</span></button>
+    <button class="dock-app" data-open="kind"     title="Kind words"><span style="--c:#b9e3a8">❝</span></button>
+    <button class="dock-app" data-open="contact"  title="Contact"><span style="--c:#c9b6f2">✉</span></button>
+    <button class="dock-app" data-open="resume"   title="Resume"><span style="--c:#ffffff; color:#d65a5a">PDF</span></button>
+    <i class="dock-sep"></i>
+    <button class="dock-app open-me" data-open="secret" title="open me"><span style="--c:#c99a6b">♡</span></button>
+  </nav>
+
+  <script>
+  /* =========================================================
+     EDIT YOUR CONTENT HERE
+     - Each project becomes a folder on the desktop.
+     - Put images in an "images" folder.
+       cover  = the big image at the top of the project window
+       images = the gallery further down
+     - Text in [square brackets] is a prompt for you to replace.
+     - Leave process or outcome as '' to hide that section.
+     ========================================================= */
+  const PROJECTS = [
+    {
+      id: 'p1', name: 'Project 01 (StudyBoost)', x: 78, y: 16, layout: 'story',
+      title: 'Study Boost', type: 'UX / Product Design · App concept',
+      intro: 'A productivity app concept designed to help students organise their academic responsibilities, manage their time, and stay motivated.',
+      hero: [
+        { src: 'images/studyboost/prototype.jpg', caption: 'Prototype screens and how rewards work', wide: true },
+      ],
+      sections: [
+        { heading: 'Project overview', text: [
+          'Study Boost is a productivity app concept designed to help students organise their academic responsibilities, manage their time, and stay motivated. The project explores how thoughtful UX/UI design can make studying more engaging, accessible, and less overwhelming.',
+        ], images: [
+          { src: 'images/studyboost/case-study.jpg', caption: 'Case study: a studying timer app with rewards', wide: true },
+        ] },
+        { heading: 'User research', text: [
+          'I identified the main user groups and their issues with studying. I asked a number of different students questions about procrastination and summarised all their answers.',
+        ], images: [
+          { src: 'images/studyboost/questions.jpg',   caption: 'Questions I asked students about procrastination', wide: true },
+          { src: 'images/studyboost/user-groups.jpg', caption: 'User groups: high school students, students with learning disabilities (ADHD), high-achieving students', wide: true },
+        ] },
+        { heading: 'Design concept', text: [
+          'The visual identity combines soft pastel colours, playful illustrations, and a clean interface to create a welcoming study environment. The aim was to make productivity feel less intimidating and more enjoyable for students.',
+        ], images: [
+          { src: 'images/studyboost/moodboard.jpg', caption: 'Moodboard and why I chose a space theme', wide: true },
+          { src: 'images/studyboost/app-icon.jpg',  caption: 'App icon on the home screen' },
+        ] },
+      ],
+    },
+    {
+      id: 'p5', name: 'Project 02 (Making the Invisible Visible)', x: 89, y: 29, layout: 'story',
+      title: 'Making the Invisible Visible', type: 'BA User Experience Design · London College of Communication, UAL',
+      intro: 'Making the Invisible Visible explores the often-unspoken judgements faced by young Muslim women surrounding the choice to wear, or not wear, the hijab. Through visual research and mapping, I investigated how cultural expectations, personal beliefs, and external perceptions influence identity and belonging. The project aims to make these invisible social pressures visible, encouraging greater understanding of the diverse experiences of Muslim women.',
+      hero: [
+        { src: 'images/invisible/hero-photo.jpg',  caption: 'Photographed by me' },
+        { src: 'images/invisible/final-piece.jpg', caption: 'Final piece: “It’s always a choice”' },
+      ],
+      quote: '“How do Muslim girls in their teens and early adulthood make personal choices about wearing—or not wearing—the hijab, and how do these choices show the diversity in their identities and the judgement they may face?”',
+      sections: [
+        { heading: 'Mapping', text: [
+          'I mapped the forces shaping young Muslim women’s choices about the hijab. Inner layers are direct, personal pressures: family, peers, community “aunties” and religious figures. Middle layers are indirect but influential environments: mosque culture, community norms, school and university, and social media audiences. Outer layers are systemic forces: government narratives, Western media, historical Islamophobia, and AI platforms and algorithms.',
+        ], images: [
+          { src: 'images/invisible/mapping.jpg', caption: 'Project mapping: forces shaping women’s choices about the hijab', wide: true },
+        ] },
+        { heading: 'Ideas', text: [
+          'I sketched infographic ideas around three themes. Negotiation paths: branching lines, some blocked, some fading out, with no “correct” route. The gaze: women are constantly observed, and judgement comes from both inside and outside the community. Layers of pressure: judgement is made when we don’t know the layers of an individual.',
+        ], images: [
+          { src: 'images/invisible/sketches.jpg',         caption: 'Rough prototype sketches' },
+          { src: 'images/invisible/infographic-plan.jpg', caption: 'How I will interpret this in my infographic' },
+        ] },
+        { heading: 'Typography', text: [
+          'I wanted to use Arabic text, but my audience wouldn’t be able to read it, so I created a hand-drawn, Arabic-inspired “faux Arabic” font. Making the type handwritten adds personal expression and authenticity, supporting my message that Muslim girls should be allowed autonomy and choice.',
+        ], images: [
+          { src: 'images/invisible/typography-1.jpg', caption: 'Typography practice' },
+          { src: 'images/invisible/typography-2.jpg', caption: 'Ascender, x-height and baseline' },
+        ] },
+        { heading: 'Photoshoot', text: [
+          'I photographed outside a mosque, using dark-toned colours to communicate emotional burden, internal conflict and psychological pressure. A sideways view, half facing the mosque and half facing away, shows being conflicted between choices.',
+        ], images: [
+          { src: 'images/invisible/photoshoot.jpg', caption: 'Photoshoot for the infographic', wide: true },
+        ] },
+        { heading: 'Photoshop', text: [
+          'Black and white strips away colour, so the viewer focuses on facial expression, form and symbolism. The absence of colour symbolises erasure of choice, voice or cultural expression. Handwritten text brings back a human voice within a digitally altered space.',
+          'The quotes replacing the hair are words hijabi and non-hijabi women have had said to them online and in real life, gathered from personal experience, WIRED articles, and comments on Instagram and TikTok.',
+        ], images: [
+          { src: 'images/invisible/photoshop.jpg', caption: 'Three Photoshop versions', wide: true },
+        ] },
+        { heading: 'Final piece', text: [
+          'Made from pearl grey card, fibre mesh and acrylic, A4.',
+        ] },
+      ],
+    },
+    {
+      id: 'p6', name: 'Project 06 (Interactive Table Mat)', x: 83, y: 74, layout: 'story',
+      title: 'Interactive Table Mat', type: 'Product Design · Engineering by Design',
+      intro: 'An interactive table mat designed for my Engineering by Design class in Brookline High School, MA.',
+      hero: [
+        { src: 'images/tablemat/prototype.jpg', caption: 'The 3D-printed prototype, and how I would make it sustainably', wide: true },
+      ],
+      sections: [
+        { heading: 'Project overview', text: [
+          'An interactive table mat designed for my Engineering by Design class in Brookline High School, MA. Working from an initial design brief, I explored how a hands-on puzzle could encourage problem-solving, creativity and collaboration through physical interaction.',
+        ] },
+        { heading: 'From sketches to 3D models', text: [
+          'I began by sketching different concepts before developing the puzzle pieces digitally using 3D modelling software. I experimented with shapes, connections and arrangements to create an interactive experience that was both engaging and functional.',
+        ], images: [
+          { src: 'images/tablemat/sketches.jpg',    caption: 'Activities, materials and first sketches' },
+          { src: 'images/tablemat/table-types.jpg', caption: 'Mat designs for 3 types of tables' },
+          { src: 'images/tablemat/cad.jpg',         caption: 'CAD models of the puzzle pieces', wide: true },
+        ] },
+        { heading: 'Prototyping & making', text: [
+          'The individual puzzle pieces were 3D printed, assembled and tested to explore how they could connect and fit together. This hands-on process allowed me to translate digital designs into a physical, interactive prototype.',
+        ], images: [
+          { src: 'images/tablemat/making.jpg', caption: 'Assembling, gluing in magnets and painting the pieces', wide: true },
+        ] },
+      ],
+    },
+    /* A "gallery" project: a wall of photos; click one to see it large.
+       Add or reorder photos in `photos` (files live in images/photography/). */
+    {
+      id: 'p2', name: 'Project 03 (Photography)', x: 76, y: 43, layout: 'gallery',
+      title: 'Portrait Photography', type: 'Photography · Studio portraits',
+      intro: 'Themed studio portrait sessions for children and families: birthdays, first-year shoots and celebration sets.',
+      photos: [
+        'images/photography/photo-01.jpg',
+        'images/photography/photo-05.jpg',
+        'images/photography/photo-07.jpg',
+        'images/photography/photo-10.jpg',
+        'images/photography/photo-03.jpg',
+        'images/photography/photo-09.jpg',
+        'images/photography/photo-02.jpg',
+        'images/photography/photo-06.jpg',
+        'images/photography/photo-08.jpg',
+        'images/photography/photo-04.jpg',
+      ],
+      quote: '“Yaya has a great eye for composition and lighting. The photos captured natural moments beautifully and gave us memories we will treasure for years.”',
+      quoteBy: 'Photography client',
+    },
+    {
+      /* A "videos" project: video files live in images/videos/ */
+      id: 'p3', name: 'Project 04 (Content Creation)', x: 88, y: 56, layout: 'videos',
+      title: 'My Edits / Videography', type: 'Videography · Editing · Content creation',
+      note: 'Edited using Adobe After Effects and Premiere Pro',
+      videos: [
+        { src: 'images/videos/marketing-content.mp4', caption: 'Marketing Content' },
+        { src: 'images/videos/fun-edit.mp4',          caption: 'Fun edits !' },
+        { src: 'images/videos/content-creation.mp4',  caption: 'Content Creation' },
+      ],
+    },
+    /* A "story" project: paintings side by side at the top, then sections.
+       Put the image files at the paths below (images/war/...). */
+    {
+      id: 'p4', name: 'Project 05 (Fine Art)', x: 68, y: 68, layout: 'story',
+      title: 'War Project', type: 'Fine Art · Painting & Sketchbook',
+      intro: 'A dialogue between my great-grandmother and her younger self, about living through the Japanese occupation of Malaysia.',
+      hero: [
+        { src: 'images/war/younger-self.jpg', caption: 'The younger self' },
+        { src: 'images/war/future-self.jpg',  caption: 'The future self' },
+      ],
+      quote: 'I arranged these two paintings to face each other, so the younger self seems to gaze at her future self, clinging to any hope that she made it through the war.',
+      sections: [
+        { heading: 'The story', text: [
+          'My great-grandmother, from Perlis in Malaysia, lived through the Japanese occupation and still vividly remembers it. Having grown up in London, Dubai and the U.S., I knew very little about this part of Malaysia’s history until I heard her experiences.',
+          'She remembers being forced to memorise and sing the Japanese national anthem every morning, under threat of punishment for anyone who couldn’t. Her memories became the starting point for this project.',
+        ] },
+        { heading: 'Research', text: [
+          'I collected images of war and protest, then mapped how war changes time, family relationships and childhood, organised around three words: observe, seek, challenge.',
+        ], images: [
+          { src: 'images/war/ledoux.jpg',   caption: 'Artist research: Stephanie Ledoux, and my collage study' },
+          { src: 'images/war/al-omari.jpg', caption: 'Artist research: Abdul Al Omari, and my portrait study' },
+        ] },
+        { heading: 'Development', text: [
+          'Portrait studies of my great-grandmother, alongside research into Mark Powell’s drawings on old letters and documents, and studies of a child hiding from the world around her.',
+        ], images: [
+          { src: 'images/war/mark-powell.jpg',   caption: 'Mark Powell research and portrait studies of my great-grandmother' },
+          { src: 'images/war/fence-studies.jpg', caption: 'Planning the younger self: rusting fences, grasping hands, the eyes' },
+        ] },
+        { heading: 'Reflection', text: [
+          'Painting my great-grandmother taught me that as we grow older, our wrinkles and scars become part of our story. Every line on her face holds a memory of what she lived through.',
+          'Listening to her experiences also showed me how deeply war can distress a person, even decades later. But her story taught me that this pain shouldn’t stop us from fighting, and that hope can survive even the hardest times.',
+        ] },
+      ],
+    },
+  ];
+
+  const ICONS = [
+    { id: 'about',  name: 'About Me',       kind: 'folder', x: 18, y: 64 },
+    { id: 'resume', name: 'Resume.pdf',     kind: 'doc',    x: 8,  y: 50 },
+    { id: 'kind',   name: 'Kind words.txt', kind: 'txt',    x: 30, y: 78 },
+    ...PROJECTS.map(p => ({ id: p.id, name: p.name, kind: 'folder', x: p.x, y: p.y })),
+    { id: 'secret', name: 'Don’t Look',     kind: 'trash',  x: 94, y: 86 },
+  ];
+
+  /* ---------- Window contents ---------- */
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  /* An image with a caption; shows a labelled placeholder until the file exists */
+  function fig(im) {
+    return `<figure class="${im.wide ? 'wide' : ''}">
+      <img src="${esc(im.src)}" alt="${esc(im.caption)}" loading="lazy" ${im.fallback ? `data-fallback="${esc(im.fallback)}"` : ''} onerror="imgMissing(this)">
+      <figcaption>${esc(im.caption)}</figcaption>
+    </figure>`;
+  }
+  function imgMissing(img) {
+    const fb = img.dataset.fallback;
+    if (fb && img.src !== fb) { img.src = fb; return; }
+    const ph = document.createElement('div');
+    ph.className = 'ph';
+    ph.textContent = img.alt;
+    img.replaceWith(ph);
+  }
+
+  function storyBody(p) {
+    return `
+      <article class="story">
+        <header class="story-head">
+          <p class="eyebrow">${esc(p.type)}</p>
+          <h2>${esc(p.title)}</h2>
+          <p class="intro">${esc(p.intro)}</p>
+        </header>
+        <div class="story-hero">
+          <div class="pair n${p.hero.length}">${p.hero.map(fig).join('')}</div>
+          ${p.quote ? `<blockquote>${esc(p.quote)}</blockquote>` : ''}
+        </div>
+        ${p.sections.map(s => `
+          <section class="story-section">
+            <div class="row">
+              <h3>${esc(s.heading)}</h3>
+              <div>${s.text.map(t => `<p>${esc(t)}</p>`).join('')}</div>
+            </div>
+            ${s.images ? `<div class="figs n${s.images.length}">${s.images.map(fig).join('')}</div>` : ''}
+          </section>`).join('')}
+      </article>`;
+  }
+
+  function galleryBody(p) {
+    return `
+      <article class="photo-page">
+        <header class="story-head">
+          <p class="eyebrow">${esc(p.type)}</p>
+          <h2>${esc(p.title)}</h2>
+          <p class="intro">${esc(p.intro)}</p>
+        </header>
+        <div class="masonry">
+          ${p.photos.map((src, i) => `
+            <button class="shot" data-photos="${p.id}" data-i="${i}" aria-label="View photo ${i + 1} large">
+              <img src="${esc(src)}" alt="${esc(p.title)}, photo ${i + 1}">
+            </button>`).join('')}
+        </div>
+        ${p.quote ? `<figure class="photo-quote"><blockquote>${esc(p.quote)}</blockquote><figcaption>— ${esc(p.quoteBy)}</figcaption></figure>` : ''}
+      </article>`;
+  }
+
+  /* Lightbox: click a photo to see it large, arrows / keys to move */
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.innerHTML = `<button class="lb-close" aria-label="Close">×</button>
+    <button class="lb-prev" aria-label="Previous photo">‹</button>
+    <img alt=""><button class="lb-next" aria-label="Next photo">›</button>`;
+  document.body.appendChild(lb);
+  let lbList = [], lbI = 0;
+  const lbShow = () => { lb.querySelector('img').src = lbList[lbI]; lb.querySelector('img').alt = `Photo ${lbI + 1} of ${lbList.length}`; };
+  const lbStep = d => { lbI = (lbI + d + lbList.length) % lbList.length; lbShow(); };
+  lb.querySelector('.lb-close').onclick = () => lb.classList.remove('on');
+  lb.querySelector('.lb-prev').onclick = () => lbStep(-1);
+  lb.querySelector('.lb-next').onclick = () => lbStep(1);
+  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('on'); });
+  document.addEventListener('click', e => {
+    // Story pages: click any image to see it large
+    const fi = e.target.closest('.story figure img');
+    if (fi) {
+      const all = [...fi.closest('.story').querySelectorAll('figure img')];
+      lbList = all.map(i => i.src); lbI = all.indexOf(fi); lbShow(); lb.classList.add('on');
+      return;
+    }
+    const s = e.target.closest('.shot');
+    if (!s) return;
+    lbList = PROJECTS.find(p => p.id === s.dataset.photos).photos;
+    lbI = +s.dataset.i; lbShow(); lb.classList.add('on');
+  });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('on')) return;
+    if (e.key === 'ArrowLeft') lbStep(-1);
+    if (e.key === 'ArrowRight') lbStep(1);
+    if (e.key === 'Escape') { lb.classList.remove('on'); e.stopImmediatePropagation(); }
+  }, true);
+
+  function videosBody(p) {
+    return `
+      <article class="video-page">
+        <header>
+          <p class="eyebrow">${esc(p.type)}</p>
+          <h2>${esc(p.title)}</h2>
+          ${p.note ? `<p class="video-note">${esc(p.note)}</p>` : ''}
+        </header>
+        <div class="polaroids">
+          ${p.videos.map(v => `
+            <figure class="polaroid">
+              <video src="${esc(v.src)}#t=0.1" controls playsinline preload="metadata"></video>
+              <figcaption>${esc(v.caption)}</figcaption>
+            </figure>`).join('')}
+        </div>
+      </article>`;
+  }
+  // Only one video plays at a time
+  document.addEventListener('play', e => {
+    if (e.target.tagName !== 'VIDEO') return;
+    document.querySelectorAll('video').forEach(v => { if (v !== e.target) v.pause(); });
+  }, true);
+
+  function projectBody(p) {
+    if (p.layout === 'story') return storyBody(p);
+    if (p.layout === 'videos') return videosBody(p);
+    if (p.layout === 'gallery') return galleryBody(p);
+    const cover = p.cover
+      ? `<img class="cover" src="${esc(p.cover)}" alt="${esc(p.title)} cover">`
+      : `<div class="cover ph">cover image</div>`;
+    const imgs = p.images.length
+      ? p.images.map(src => `<img src="${esc(src)}" alt="${esc(p.title)}" loading="lazy">`).join('')
+      : '<div class="ph">✦</div><div class="ph">✦</div><div class="ph">✦</div><div class="ph">✦</div>';
+    const section = (label, text) => text ? `<h3>${label}</h3><p>${esc(text)}</p>` : '';
+    const fact = (label, text) => text ? `<div><dt>${label}</dt><dd>${esc(text)}</dd></div>` : '';
+    return `
+      <article class="project">
+        ${cover}
+        <div class="case">
+          <div class="case-main">
+            <p class="eyebrow">${esc(p.type)} · ${esc(p.year)}</p>
+            <h2>${esc(p.title)}</h2>
+            ${section('Overview', p.summary)}
+            ${section('Process', p.process)}
+            ${section('Outcome', p.outcome)}
+          </div>
+          <dl class="facts">
+            ${fact('Type', p.type)}
+            ${fact('Year', p.year)}
+            ${fact('My role', p.role)}
+            ${fact('Tools', p.tools)}
+          </dl>
+        </div>
+        <h3 class="gallery-title">Gallery</h3>
+        <div class="gallery">${imgs}</div>
+      </article>`;
+  }
+
+  const WINDOWS = {
+    about: { title: 'About Me', w: 720, big: true, body: `
+      <div class="about">
+        <img class="about-banner" src="images/about-photo.jpg" alt="Yaya Ehsan sitting on a stool beside wooden shelves with plants">
+        <div class="about-text">
+          <h2>Hi, I’m Yaya ✦</h2>
+          <p class="eyebrow">Designer &amp; Content Creator</p>
+          <h3>UX / Digital / Product Design</h3>
+          <p>Design intuitive and engaging digital experiences that put users first. From user research and wireframes to prototypes and interfaces, I create solutions that are both functional and visually appealing.</p>
+          <h3>Photography / Videography</h3>
+          <p>Capture meaningful moments through professional photography and video. From portraits and events to creative content and social media campaigns, I create visuals that tell compelling stories.</p>
+          <h3>Fine Art</h3>
+          <p>Create original artwork that explores ideas, emotions, and visual storytelling, using a range of traditional and digital techniques.</p>
+        </div>
+      </div>` },
+    projects: { title: 'Projects', w: 520, body: () => `
+      <div class="finder">${PROJECTS.map(p => `
+        <button class="finder-item" data-open="${p.id}">${folderSVG()}<span>${esc(p.name)}</span></button>`).join('')}
+      </div>` },
+    photos: { title: 'Photography', w: 560, body: () => projectBody(PROJECTS.find(p => p.id === 'p2')) },
+    kind: { title: 'Kind words.txt', w: 540, body: `
+      <div class="txt">
+        <p>“Yaya demonstrated excellent attention to detail throughout the project and consistently incorporated feedback to improve her work.”<br><i>— Teacher</i></p>
+        <p>“Yaya has a great eye for composition and lighting. The photos captured natural moments beautifully and gave us memories we will treasure for years.”<br><i>— Photography client</i></p>
+        <p>“Yaya consistently demonstrated creativity, professionalism, and a strong willingness to learn. She was reliable, organised, and able to take initiative. Her positive attitude and attention to detail made her a valuable member of the team.”<br><i>— Internship supervisor</i></p>
+      </div>` },
+    contact: { title: 'New Message', w: 500, body: `
+      <div class="contact">
+        <p><b>To:</b> Yaya Ehsan</p>
+        <p><b>Subject:</b> Let’s make something lovely</p>
+        <hr>
+        <p>Open to design projects, photo &amp; video shoots, and creative collabs.</p>
+        <dl class="contact-list">
+          <div><dt>Email</dt><dd><a href="mailto:itsyayaehsan@gmail.com">itsyayaehsan@gmail.com</a></dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+447304494052">+44 7304 494052</a></dd></div>
+          <div><dt>Instagram</dt><dd>
+            <a href="https://www.instagram.com/yayaportfolio/" target="_blank" rel="noopener">@yayaportfolio</a> ·
+            <a href="https://www.instagram.com/yaya.cahaya_/" target="_blank" rel="noopener">@yaya.cahaya_</a></dd></div>
+          <div><dt>TikTok</dt><dd><a href="https://www.tiktok.com/@yaya.cahaya_" target="_blank" rel="noopener">@yaya.cahaya_</a></dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/DhiyaEhsan" target="_blank" rel="noopener">Dhiya Ehsan</a></dd></div>
+          <div><dt>YouTube</dt><dd><a href="https://www.youtube.com/@advrax" target="_blank" rel="noopener">@advrax</a></dd></div>
+        </dl>
+        <a class="btn" href="mailto:itsyayaehsan@gmail.com">Email me</a>
+      </div>` },
+    resume: { title: 'Resume.pdf', w: 780, big: true, body: `
+      <div class="resume">
+        <object data="resume.pdf" type="application/pdf">
+          <p class="muted">Your browser can’t show the PDF here. Use the buttons below to open or download it.</p>
+        </object>
+        <div class="resume-actions">
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+          <a class="btn ghost" href="resume.pdf" download="Yaya Ehsan CV.pdf">Download</a>
+        </div>
+      </div>` },
+    secret: { title: 'Don’t Look', w: 380, body: `
+      <div class="secret">
+        <p class="big">👀</p>
+        <p>You looked. Here are my rejected ideas, bad first drafts and 400 blurry photos.</p>
+        <p class="muted">Every good project starts here ✦</p>
+      </div>` },
+  };
+  PROJECTS.forEach(p => WINDOWS[p.id] = { title: p.name, w: 940, big: true, body: () => projectBody(p) });
+  WINDOWS.photos.w = 940; WINDOWS.photos.big = true;
+
+  /* ---------- Icons ---------- */
+  function folderSVG() {
+    return `<svg viewBox="0 0 64 52" class="ico"><path d="M2 8a4 4 0 0 1 4-4h18l5 5h29a4 4 0 0 1 4 4v33a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#e48aab"/><path d="M2 16a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v30a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z" fill="#f4b3c9"/></svg>`;
+  }
+  const ART = {
+    folder: folderSVG,
+    doc: () => `<svg viewBox="0 0 48 60" class="ico doc"><path d="M4 2h28l12 12v42a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" fill="#fff" stroke="#ccc"/><path d="M32 2v12h12" fill="#eee" stroke="#ccc"/><text x="23" y="44" text-anchor="middle" font-size="10" font-weight="700" fill="#d65a5a" font-family="Inter">PDF</text></svg>`,
+    txt: () => `<svg viewBox="0 0 48 60" class="ico doc"><path d="M4 2h28l12 12v42a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" fill="#fff" stroke="#ccc"/><path d="M32 2v12h12" fill="#eee" stroke="#ccc"/><g stroke="#bbb" stroke-width="2"><line x1="10" y1="26" x2="38" y2="26"/><line x1="10" y1="33" x2="38" y2="33"/><line x1="10" y1="40" x2="30" y2="40"/></g></svg>`,
+    trash: () => `<svg viewBox="0 0 48 60" class="ico doc"><rect x="6" y="10" width="36" height="6" rx="2" fill="#d9d9de"/><path d="M9 18h30l-3 38H12z" fill="#ececf0" stroke="#c5c5cc"/><g stroke="#c5c5cc" stroke-width="1.5"><line x1="18" y1="24" x2="19" y2="50"/><line x1="24" y1="24" x2="24" y2="50"/><line x1="30" y1="24" x2="29" y2="50"/></g></svg>`,
+  };
+
+  const desktop = document.getElementById('desktop');
+  const iconLayer = document.getElementById('icons');
+  const winLayer = document.getElementById('windows');
+  const isMobile = () => matchMedia('(max-width: 700px)').matches;
+
+  ICONS.forEach(ic => {
+    const el = document.createElement('button');
+    el.className = 'icon';
+    el.dataset.id = ic.id;
+    el.style.left = ic.x + '%';
+    el.style.top = ic.y + '%';
+    el.innerHTML = ART[ic.kind]() + `<span class="label">${esc(ic.name)}</span>`;
+    iconLayer.appendChild(el);
+    makeDraggable(el, el, { onClick: () => openWin(ic.id), keepInside: true });
+  });
+
+  /* ---------- Windows ---------- */
+  let z = 10, offset = 0;
+  const open = {};
+
+  function openWin(id) {
+    const def = WINDOWS[id];
+    if (!def) return;
+    if (open[id]) { focus(open[id]); return; }
+    const w = document.createElement('section');
+    w.className = 'window';
+    w.setAttribute('role', 'dialog');
+    w.setAttribute('aria-label', def.title);
+    const width = Math.min(def.w, desktop.clientWidth - 24);
+    w.style.width = width + 'px';
+    w.style.left = Math.max(12, (desktop.clientWidth - width) / 2 + offset) + 'px';
+    w.style.top = Math.max(12, (def.big ? 16 : 60) + offset) + 'px';
+    if (def.big) w.classList.add('big');
+    offset = (offset + 28) % 140;
+    w.innerHTML = `
+      <div class="titlebar">
+        <span class="lights"><button class="close" aria-label="Close"></button><i></i><button class="zoom" aria-label="Full screen"></button></span>
+        <span class="wtitle">${esc(def.title)}</span>
+      </div>
+      <div class="wbody">${typeof def.body === 'function' ? def.body() : def.body}</div>`;
+    winLayer.appendChild(w);
+    open[id] = w;
+    focus(w);
+    w.addEventListener('pointerdown', () => focus(w));
+    w.querySelector('.close').addEventListener('click', e => { e.stopPropagation(); w.remove(); delete open[id]; });
+    w.querySelector('.zoom').addEventListener('click', e => { e.stopPropagation(); w.classList.toggle('max'); });
+    w.querySelector('.titlebar').addEventListener('dblclick', () => w.classList.toggle('max'));
+    if (!isMobile()) makeDraggable(w, w.querySelector('.titlebar'), {});
+  }
+  function focus(w) { w.style.zIndex = ++z; }
+
+  // Anything with data-open (menu bar, dock, finder items) opens a window
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-open]');
+    if (t) openWin(t.dataset.open);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      const top = [...winLayer.children].sort((a, b) => b.style.zIndex - a.style.zIndex)[0];
+      if (top) top.querySelector('.close').click();
+    }
+  });
+
+  /* ---------- Dragging (mouse + touch) ---------- */
+  function makeDraggable(el, handle, { onClick, keepInside }) {
+    let sx, sy, ox, oy, moved = false, dragging = false;
+    handle.addEventListener('pointerdown', e => {
+      if (e.target.closest('.close, .zoom') || el.classList.contains('max')) return;
+      if (isMobile()) return; // on phones things sit in a grid: tap to open
+      dragging = true; moved = false;
+      sx = e.clientX; sy = e.clientY;
+      ox = el.offsetLeft; oy = el.offsetTop;
+      handle.setPointerCapture(e.pointerId);
+      el.classList.add('dragging');
+    });
+    handle.addEventListener('pointermove', e => {
+      if (!dragging) return;
+      const dx = e.clientX - sx, dy = e.clientY - sy;
+      if (Math.abs(dx) + Math.abs(dy) > 4) moved = true;
+      const maxX = desktop.clientWidth - 40, maxY = desktop.clientHeight - 40;
+      el.style.left = Math.min(maxX, Math.max(-el.offsetWidth + 80, ox + dx)) + 'px';
+      el.style.top = Math.min(maxY, Math.max(0, oy + dy)) + 'px';
+    });
+    const end = () => {
+      if (!dragging) return;
+      dragging = false; el.classList.remove('dragging');
+    };
+    handle.addEventListener('pointerup', end);
+    handle.addEventListener('pointercancel', end);
+    if (onClick) handle.addEventListener('click', () => { if (!moved) onClick(); moved = false; });
+  }
+
+  /* ---------- "portfolio." letters grow near the mouse ---------- */
+  (() => {
+    const h1 = document.querySelector('.welcome h1');
+    const word = h1.textContent;
+    h1.setAttribute('aria-label', word);
+    h1.innerHTML = [...word].map(ch => `<span class="ltr" aria-hidden="true">${ch}</span>`).join('');
+    const letters = [...h1.querySelectorAll('.ltr')];
+    const reach = 160;   // how far (px) from the mouse letters start to grow
+    const grow = 0.45;   // how much the closest letter grows (0.45 = 45% bigger)
+    h1.addEventListener('pointermove', e => {
+      letters.forEach(l => {
+        const r = l.getBoundingClientRect();
+        const d = Math.abs(e.clientX - (r.left + r.width / 2));
+        const t = Math.max(0, 1 - d / reach);
+        const ease = t * t * (3 - 2 * t);
+        l.style.transform = `translateY(${-ease * 6}px) scale(${1 + ease * grow})`;
+        l.style.marginInline = `${ease * 0.11}em`;   // push neighbours apart so letters don't overlap
+        l.style.color = ease > .55 ? 'var(--pink-deep)' : '';
+      });
+    });
+    h1.addEventListener('pointerleave', () => letters.forEach(l => { l.style.transform = ''; l.style.color = ''; l.style.marginInline = ''; }));
+  })();
+
+  /* ---------- Pink sparkle trail that follows the mouse ---------- */
+  (() => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const layer = document.createElement('div');
+    layer.className = 'sparkle-layer';
+    document.body.appendChild(layer);
+    const colors = ['#f48fb1', '#f8bbd0', '#ec6fa0', '#ffd1e3', '#e75b93'];
+    const shapes = ['✦', '✧', '⋆', '•'];
+    let last = 0;
+    document.addEventListener('pointermove', e => {
+      if (e.pointerType !== 'mouse') return;          // no trail on touch screens
+      const now = performance.now();
+      if (now - last < 28) return;                    // limit how many we make
+      last = now;
+      if (layer.childElementCount > 60) return;
+      const s = document.createElement('span');
+      s.className = 'sparkle';
+      s.textContent = shapes[Math.floor(Math.random() * shapes.length)];
+      const size = 8 + Math.random() * 12;
+      s.style.cssText = `left:${e.clientX}px; top:${e.clientY}px; font-size:${size}px; color:${colors[Math.floor(Math.random() * colors.length)]};
+        --dx:${(Math.random() - .5) * 40}px; --dy:${12 + Math.random() * 30}px; --r:${(Math.random() - .5) * 180}deg;`;
+      layer.appendChild(s);
+      s.addEventListener('animationend', () => s.remove());
+    });
+  })();
+
+  /* ---------- Clock + sticky note ---------- */
+  const clock = document.getElementById('clock');
+  const tick = () => clock.textContent = new Date().toLocaleString([], isMobile()
+    ? { hour: 'numeric', minute: '2-digit' }
+    : { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+  tick(); setInterval(tick, 15000);
+  makeDraggable(document.getElementById('sticky'), document.getElementById('sticky'), {});
+  </script>
+</body>
+</html>
